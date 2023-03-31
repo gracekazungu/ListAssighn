@@ -3,7 +3,7 @@ fun main(){
     println(listOfPeopleHeight(mutableListOf(23.0,34.5,45.9,56.0,90.0)))
 
     val person=Person("Grace",21,5.0,60.5)
-    PeopleObject()
+    PersonObject()
 
     val personn=Persom("cynthia",23,4.0,50.0)
     PersonnObjects()
@@ -38,7 +38,7 @@ val avrgheight=height.average()
 //3. Given a list of Person objects, each with the attributes, name, age,
 //height and weight. Sort the list in order of descending age
  data class Person(var name:String,var age:Int,var height:Double,var weight:Double)
-    fun PeopleObject() {
+    fun PersonObject() {
         val name1 = Person("Joy", 22, 4.5, 56.0)
         val name2 = Person("Idaya", 23, 5.0, 46.0)
         val name3 = Person("Becky", 24, 4.7, 56.0)
@@ -48,16 +48,18 @@ val avrgheight=height.average()
         println(sortedNames)
     }
 
+
 //4. Given a list similar to the one above, write a function in which you will
 //create 2 more people objects and add them to the list at one go.
-data class Persom(var name: String,var age: Int,var height: Double,var weight: Double)
+data class Persom(var name: String, var age: Int,var height: Double, var weight: Double)
     fun PersonnObjects() {
-       val name4 = Persom("pauline", 25, 6.0, 60.0)
-       val name5 = Persom("faith", 30, 3.0, 45.7)
-       val namesPeople = listOf(name4, name5)
-        val sorted=namesPeople.sortedBy { nme->nme.height }
+        val name4 = Persom("pauline", 25, 6.0, 60.0)
+        val name5 = Persom("faith", 30, 3.0, 45.7)
+        val namesPeople = listOf(name4, name5)
+        val sorted = namesPeople.sortedBy { nme -> nme.height }
         println(sorted)
-       }
+    }
+
 
 
 
@@ -72,7 +74,7 @@ val toyota=Car("KDA 456Y",45)
     val cruiser=Car("KGA 786T",56)
     val avrgMileage= listOf(toyota,subaru,cruiser)
     val sumMileage=avrgMileage.sumOf { milea->milea.mileage }
-    var averageMileage=sumMileage/3
+    var averageMileage=sumMileage/avrgMileage.size
     return averageMileage
 
 
